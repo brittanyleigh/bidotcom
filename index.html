@@ -1,0 +1,106 @@
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+	<div class="header">
+		<div class="title">
+			<h1>Brittany Isenberg</h1>
+			<h4>Web Developer & Designer</h4>
+		</div>
+		<div class="links">
+			<a href="#projects"><i class="fas fa-code"></i><span>Projects</span></a>
+			<a href="#skills"><i class="fas fa-code-branch"></i><span>Skills</span></a>
+			<a href="#about"><i class="fas fa-user-circle"></i><span>About</span></a>
+			<a href="#contact"><i class="fas fa-paper-plane"></i><span>Contact</span></a>
+			<a href="https://www.linkedin.com/in/brittanyisenberg/" target="_blank"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+			<a href="https://github.com/brittanyleigh" target="_blank"><i class="fab fa-github"></i><span>GitHub</span></a>
+		</div>
+	</div>
+	<div class="projects" id="projects">
+		<div>
+			<div class="description">
+				<h3>MLB Team Stats</h3>
+				<p class="tech">JQuery & REST APIs</p>
+				<p><a href="https://github.com/brittanyleigh/brittanyleigh.github.io" target="_blank">Code</a> | <a href="https://brittanyleigh.github.io/baseball.html#131" target="_blank">Live</a></p>
+			</div>
+			<img src="img/baseball.png">
+		</div>
+		<div>
+			<div class="description">
+				<h3>R-Y-P.org</h3>
+				<p class="tech">Wordpress Theme Design & Development</p>
+				<p><a href="https://github.com/brittanyleigh/ryp" target="_blank">Code</a> | <a href="http://r-y-p.org/" target="_blank">Live</a></p>
+			</div>
+			<img src="img/ryp.png">
+		</div>
+		<div>
+			<div class="description">
+				<h3>USA's Best Parks</h3>
+				<p class="tech">PHP & MySQL</p>
+				<p><a href="https://github.com/brittanyleigh/heroku-parks" target="_blank">Code</a> | <a href="https://thebestparks.herokuapp.com/" target="_blank">Live</a></p>
+			</div>
+			<img src="img/parks.png">
+		</div>
+	</div>
+	<div class="secondary">
+		<div class="shadow"></div>
+		<div class="skills">
+			<h2>Skills</h2>
+			<div id="skills">
+				<div><img src="img/html.png"><p>HTML</p></div>
+				<div><img src="img/css.png"><p>CSS</p></div>
+				<div><img src="img/javascript.png"><p>Javascript</p></div>
+				<div><img src="img/jquery.png"><p>JQuery</p></div>
+				<div><img src="img/git.png"><p>Git</p></div>
+				<div><img src="img/github.png"><p>GitHub</p></div>
+				<div><img src="img/sass.png"><p>Sass</p></div>
+				<div><img src="img/gulp.png"><p>Gulp</p></div>
+				<div><img src="img/python.png"><p>Python</p></div>
+				<div><img src="img/django.png"><p>Django</p></div>
+				<div><img src="img/cordova.png"><p>Cordova</p></div>
+				<div><img src="img/php.png"><p>PHP</p></div>
+				<div><img src="img/mysql.png"><p>MySQL</p></div>
+				<div><img src="img/wordpress.png"><p>Wordpress</p></div>
+				<div><img src="img/illustrator.png"><p>Illustrator</p></div>
+				<div><img src="img/photoshop.png"><p>Photoshop</p></div>
+				<div><img src="img/sketch.png"><p>Sketch</p></div>		
+			</div>
+		</div>
+		<div class="about" id="about">
+			<h2>About Me</h2>
+			<p><i class="fas fa-caret-right"></i> Charlotte, NC native. </p>
+			<p><i class="fas fa-caret-right"></i> Rochester, NY transplant.</p>
+			<p><i class="fas fa-caret-right"></i> Dog lover. Shelter dog adopter.</p>
+			<p><i class="fas fa-caret-right"></i> Dark chocolate addict. Smoothie drinker.</p>
+			<p><i class="fas fa-caret-right"></i> Jewelry maker. Creative spirit.</p>
+			<p><i class="fas fa-caret-right"></i> Avid traveler. Mountain hiker.</p>
+			<p><i class="fas fa-caret-right"></i> Passionate Chicago Cubs fan.</p>
+		</div>
+		<div class="contact" id="contact">
+			<h2>Get In Touch</h2>
+			<form action="https://formspree.io/brittany.isenberg@gmail.com" method="POST">
+			    <input type="text" name="name" placeholder="Name" class="small" required>
+			    <input type="email" name="_replyto" placeholder="Email" class="small" required><br>
+			    <textarea name="message" placeholder="Your Message" class="large" rows="6" required></textarea><br>
+			    <input type="submit" value="Send" class="submit">
+			    <input type="hidden" name="_next" value="http://localhost:8888/new-portfolio" />
+			</form>
+		</div>
+	</div>
+	<div class="desk">
+		<img src="img/desk.png">
+	</div>
+
+</body>

@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600|Raleway:400,600");
+h1, h2, h3, h4, h5, h6, p {
+  margin: 5px 0px;
+  color: #949494; }
+
+h1 {
+  font-family: "Cormorant Garamond", cursive;
+  color: #939da2; }
+
+h2 {
+  text-align: center;
+  font-family: "Cormorant Garamond", cursive;
+  letter-spacing: 1;
+  color: #939da2; }
+
+h3, h4, h5, h6, p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400; }
+
+body {
+  background: url("../img/subtle_white_feathers.png");
+  margin: 0px;
+  overflow-x: hidden; }
+
+*:focus {
+  outline: none; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px; }
+  @media screen and (max-width: 575px) {
+    .header {
+      flex-wrap: wrap;
+      text-align: center; }
+      .header .title, .header .links {
+        width: 100%; } }
+
+.title h4 {
+  letter-spacing: 1.3;
+  text-transform: uppercase;
+  font-size: 13px; }
+
+.links {
+  font-size: 24px; }
+  .links a {
+    color: #939da2;
+    text-decoration: none;
+    margin: 0px 5px; }
+    .links a span {
+      font-size: 16px;
+      display: none;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 5px; }
+
+.projects {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap; }
+  .projects img {
+    width: 100%;
+    pointer-events: none; }
+  .projects .slick-slide {
+    height: initial; }
+  .projects .slick-next {
+    z-index: 1000;
+    margin-left: -63px;
+    padding-right: 37px; }
+  .projects .slick-prev {
+    z-index: 1000;
+    margin-right: -63px;
+    padding-left: 37px; }
+  .projects .description {
+    padding: 15px;
+    text-align: center;
+    margin-bottom: -100px;
+    margin-top: 50px; }
+    @media screen and (max-width: 900px) {
+      .projects .description {
+        margin-top: 35px; } }
+    @media screen and (max-width: 575px) {
+      .projects .description {
+        margin-top: 25px; } }
+    .projects .description h3 {
+      letter-spacing: 1;
+      border-bottom: double 4px gainsboro;
+      display: inline-block;
+      padding-bottom: 5px;
+      font-family: "Cormorant Garamond", cursive;
+      font-weight: bold;
+      font-size: 22px;
+      color: #939da2; }
+    .projects .description p, .projects .description a {
+      color: #949494;
+      letter-spacing: 1;
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      text-transform: uppercase; }
+    .projects .description a {
+      font-weight: 400;
+      text-decoration: none;
+      border-bottom: dotted 2px gainsboro; }
+      .projects .description a:hover {
+        font-weight: bold; }
+
+.secondary {
+  display: flex;
+  flex-wrap: wrap; }
+  .secondary h2 {
+    letter-spacing: 1;
+    border-bottom: double 4px gainsboro;
+    padding-bottom: 5px;
+    font-family: "Cormorant Garamond", cursive;
+    font-weight: 600; }
+  .secondary .shadow {
+    height: 50px;
+    background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
+    flex-basis: 100%; }
+  .secondary .about, .secondary .contact {
+    padding: 15px 30px; }
+    .secondary .about h2, .secondary .contact h2 {
+      margin: 50px 0px; }
+  .secondary #skills {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center; }
+    .secondary #skills p {
+      display: none;
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+      color: #9398a2;
+      letter-spacing: 1;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 13px;
+      padding-top: 10px; }
+  .secondary .skills {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 15px 0px; }
+    .secondary .skills h2 {
+      margin: 50px 30px; }
+    .secondary .skills img {
+      filter: grayscale(100%);
+      opacity: .25;
+      max-height: 85px;
+      margin: 0 auto;
+      pointer-events: none; }
+      @media screen and (max-width: 500px) {
+        .secondary .skills img {
+          max-height: 75px; } }
+    .secondary .skills .slick-slide {
+      height: initial;
+      padding-bottom: 38px; }
+  .secondary .about, .secondary .contact {
+    flex-grow: 1; }
+  .secondary .about p {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0px;
+    text-transform: uppercase; }
+    .secondary .about p svg {
+      color: #dcdcdc; }
+  .secondary .contact form {
+    text-align: center; }
+  .secondary .contact input, .secondary .contact textarea {
+    font-size: 18px;
+    font-family: 'open sans';
+    padding: 5px;
+    margin-bottom: 10px;
+    border: solid 1px #ccc;
+    font-family: 'raleway';
+    font-size: 16px; }
+  .secondary .contact .submit {
+    border-radius: 0px;
+    background: gainsboro;
+    border: none;
+    padding: 10px;
+    min-width: 150px;
+    color: #939da2; }
+    .secondary .contact .submit:hover {
+      background: #cfcfcf;
+      cursor: pointer; }
+  .secondary .contact .small {
+    width: 35%; }
+    @media screen and (max-width: 650px) {
+      .secondary .contact .small {
+        width: calc(50% - 32.5px); } }
+    @media screen and (max-width: 400px) {
+      .secondary .contact .small {
+        width: calc(100% - 30px); } }
+  .secondary .contact .large {
+    width: 70.25%; }
+    @media screen and (max-width: 650px) {
+      .secondary .contact .large {
+        width: calc(100% - 60px); } }
+    @media screen and (max-width: 400px) {
+      .secondary .contact .large {
+        width: calc(100% - 30px); } }
+
+.slick-slider button {
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  color: #c1c1c1;
+  margin-bottom: 28px; }
+  .slick-slider button:hover {
+    color: #818181;
+    cursor: pointer; }
+
+.desk img {
+  width: 100%; }
+@media screen and (max-width: 450px) {
+  .desk {
+    overflow: hidden; }
+    .desk img {
+      width: 1000px; } }
+
+/*# sourceMappingURL=style.css.map */
