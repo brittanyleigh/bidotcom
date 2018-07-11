@@ -172,7 +172,8 @@ body {
     margin-bottom: 10px;
     border: solid 1px #ccc;
     font-family: 'raleway';
-    font-size: 16px; }
+    font-size: 16px;
+    color: #9398a2; }
   .secondary .contact .submit {
     border-radius: 0px;
     background: gainsboro;
@@ -183,6 +184,9 @@ body {
     .secondary .contact .submit:hover {
       background: #cfcfcf;
       cursor: pointer; }
+  .secondary .contact ::placeholder {
+    color: #d8d9dd;
+    opacity: 1; }
   .secondary .contact .small {
     width: 35%; }
     @media screen and (max-width: 650px) {

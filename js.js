@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('img').ready(function(){
+	setTimeout(function () {
 	  $('#skills').slick({
 		    infinite: true,
 		    slidesToShow: 10,
@@ -42,7 +42,7 @@ $(document).ready(function() {
 			  ]
 		});
 	    slickStyles();
-	});
+	}, 500);
 
 	$('.slick-slide').hover(
 		function(){
@@ -108,6 +108,6 @@ $(document).ready(function() {
 	    $(document).find('.slick-prev').html('<i class="fas fa-caret-left"></i>');
 		$(document).find('.slick-next').html('<i class="fas fa-caret-right"></i>');
 	  }
-
+  slickStyles();
   
 });
