@@ -6,6 +6,7 @@ $(document).ready(function() {
 		    slidesToScroll: 1,
 		    autoplay: true,
 		    autoplaySpeed: 2000,
+		    //adaptiveHeight: true,
 	        responsive: [
 			    {
 			      breakpoint: 1150,
@@ -41,37 +42,39 @@ $(document).ready(function() {
 			    }
 			  ]
 		});
+	  	$('.skills .slick-slide').hover(
+			function(){
+				$(this).find('p').show();
+				$(this).css('padding-bottom', '0');
+			}, 
+			function(){
+				$(this).find('p').hide();
+				$(this).css('padding-bottom', '28px');
+			}
+		);
 	    slickStyles();
 	}, 500);
 
-	$('.slick-slide').hover(
-		function(){
-			$(this).find('p').show();
-			$(this).css('padding-bottom', '0');
-		}, 
-		function(){
-			$(this).find('p').hide();
-			$(this).css('padding-bottom', '28px');
-		}
-	);
 
-	$('.links a').hover(
-		function(){
-			$(this).find('span').fadeIn(750);
-			$(this).find('svg').fadeOut(0);
-		}, 
-		function(){
-			$(this).find('span').fadeOut(0);
-			$(this).find('svg').fadeIn(750);
-		}
-	);
+	if ($(window).width() > 768){
+		$('.links a').hover(
+			function(){
+				$(this).find('span').fadeIn(750);
+				$(this).find('svg').fadeOut(0);
+			}, 
+			function(){
+				$(this).find('span').fadeOut(0);
+				$(this).find('svg').fadeIn(750);
+			}
+		);
+	}	
 
 	$(window).resize(function(){
 	    slickStyles();
 	    if ($(window).width() > 1050){
-	    	$('.slick-list').css('width', '100%');
-	    	$('.slick-track').css('width', '100%');
-	    	$('.slick-slide').css('width', '33.333333%!important');
+	    	$('.projects .slick-list').css('width', '100%');
+	    	$('.projects .slick-track').css('width', '100%');
+	    	$('.projects .slick-slide').css('width', '33.333333%!important');
 	    }
 	});
 
@@ -82,6 +85,7 @@ $(document).ready(function() {
 	    autoplay: false,
 	    arrows: false,
 	    dots: false,
+	    adaptiveHeight: true,
 	    responsive: [
 		    {
 		      breakpoint: 1100,
@@ -102,12 +106,11 @@ $(document).ready(function() {
 	    ]
 	});
 
-
-
     function slickStyles(){
+    	$(document).find('.projects .slick-arrow').appendTo('.secondary .shadow');
 	    $(document).find('.slick-prev').html('<i class="fas fa-caret-left"></i>');
 		$(document).find('.slick-next').html('<i class="fas fa-caret-right"></i>');
 	  }
-  slickStyles();
+	  slickStyles();
   
 });

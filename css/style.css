@@ -64,14 +64,6 @@ body {
     pointer-events: none; }
   .projects .slick-slide {
     height: initial; }
-  .projects .slick-next {
-    z-index: 1000;
-    margin-left: -63px;
-    padding-right: 37px; }
-  .projects .slick-prev {
-    z-index: 1000;
-    margin-right: -63px;
-    padding-left: 37px; }
   .projects .description {
     padding: 15px;
     text-align: center;
@@ -108,6 +100,13 @@ body {
 .secondary {
   display: flex;
   flex-wrap: wrap; }
+  .secondary .shadow .slick-next, .secondary .shadow .slick-prev {
+    z-index: 1000;
+    display: inline-block !important;
+    color: #939da2;
+    padding-top: 15px; }
+    .secondary .shadow .slick-next:hover, .secondary .shadow .slick-prev:hover {
+      color: #545d62; }
   .secondary h2 {
     letter-spacing: 1;
     border-bottom: double 4px gainsboro;
@@ -117,15 +116,22 @@ body {
   .secondary .shadow {
     height: 50px;
     background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
-    flex-basis: 100%; }
+    flex-basis: 100%;
+    text-align: center; }
   .secondary .about, .secondary .contact {
     padding: 15px 30px; }
     .secondary .about h2, .secondary .contact h2 {
       margin: 50px 0px; }
   .secondary #skills {
-    margin: 0px 30px;
+    padding: 0px 30px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .secondary #skills div {
+        min-width: 95px;
+        text-align: center; } }
     .secondary #skills p {
       display: none;
       font-family: "Raleway", sans-serif;
@@ -136,6 +142,9 @@ body {
       text-transform: uppercase;
       font-size: 13px;
       padding-top: 10px; }
+      @media screen and (max-width: 768px) {
+        .secondary #skills p {
+          display: block; } }
   .secondary .skills {
     flex-basis: 100%;
     max-width: 100%;
@@ -148,6 +157,9 @@ body {
       max-height: 85px;
       margin: 0 auto;
       pointer-events: none; }
+      @media screen and (max-width: 768px) {
+        .secondary .skills img {
+          padding: 10px; } }
       @media screen and (max-width: 500px) {
         .secondary .skills img {
           max-height: 75px; } }
@@ -204,15 +216,20 @@ body {
       .secondary .contact .large {
         width: calc(100% - 30px); } }
 
-.slick-slider button {
+.slick-slider button, .shadow button {
   border: none;
   background: transparent;
   font-size: 32px;
   color: #c1c1c1;
   margin-bottom: 28px; }
-  .slick-slider button:hover {
+  .slick-slider button:hover, .shadow button:hover {
     color: #818181;
     cursor: pointer; }
+
+.slick-slider {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
 
 .desk img {
   width: 100%; }

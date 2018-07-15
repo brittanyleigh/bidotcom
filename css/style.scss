@@ -93,16 +93,6 @@ body {
 	.slick-slide {
 		height: initial;
 	}
-	.slick-next {
-		z-index: 1000;
-		margin-left: -63px;
-		padding-right: 37px;
-	}	
-	.slick-prev {
-		z-index: 1000;
-	    margin-right: -63px;
-	    padding-left: 37px;
-	}
 	.description {
 	    padding: 15px;
 	    text-align: center;
@@ -152,6 +142,17 @@ body {
 .secondary {
     display: flex;
     flex-wrap: wrap;
+    .shadow {
+		.slick-next, .slick-prev {
+			z-index: 1000;
+			display: inline-block!important;
+			color: $contrastColor;
+			padding-top: 15px;
+			&:hover {
+				color: darken($contrastColor, 25%);
+			}
+		}	
+	}
 
 	h2 {
 		letter-spacing: 1;
@@ -164,6 +165,7 @@ body {
 	    height: 50px;
 	    background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
 	    flex-basis: 100%;
+	    text-align: center;
 	}
 	.about, .contact {
 		padding: 15px 30px;
@@ -172,9 +174,18 @@ body {
 		}
 	}
 	#skills {
-		margin: 0px 30px;
+		padding: 0px 30px;
 	    display: flex;
 	    align-items: center;
+        flex-wrap: wrap;
+	    justify-content: center;
+
+	    div {
+	    	@media screen and (max-width: 768px){
+	    		min-width: 95px;
+	    		text-align: center;
+	    	}
+	    }
 
 	    p {
 	    	display: none;
@@ -186,6 +197,10 @@ body {
 	    	text-transform: uppercase;
 		    font-size: 13px;
 		    padding-top: 10px;
+
+		    @media screen and (max-width: 768px){
+		    	display: block;
+		    }
 	    }
 	}
 	.skills {
@@ -201,7 +216,9 @@ body {
 		    max-height: 85px;
 	        margin: 0 auto;
 	        pointer-events: none;
-
+	        @media screen and (max-width: 768px){
+	        	padding: 10px;
+	        }
 	        @media screen and (max-width: 500px){
 	        	max-height: 75px;
 	        }
@@ -278,7 +295,7 @@ body {
 		}
 	}
 }
-.slick-slider {
+.slick-slider, .shadow {
 	button {
 	    border: none;
 	    background: transparent;
@@ -292,6 +309,9 @@ body {
 	    }
 	}
 }
+
+.slick-slider { display: table; table-layout: fixed; width: 100%; }
+
 
 .desk {
 	img {
