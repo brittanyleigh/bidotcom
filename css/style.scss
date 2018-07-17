@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600|Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 
-$titleFont: 'Cormorant Garamond', cursive;
+//$titleFont: 'Cormorant Garamond', cursive;
+$titleFont: 'Palatino', cursive;
 $mainFont: 'Raleway', sans-serif;
 $mainColor: #9398a2;
 $secondaryColor: #949494;
@@ -15,6 +16,8 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
 	font-family: $titleFont;
 	color: $contrastColor;
+	font-weight: 100;
+	font-size: 30px;
 }
 
 h2 {
@@ -22,6 +25,7 @@ h2 {
 	font-family: $titleFont;
 	letter-spacing: 1;
 	color: $contrastColor;
+	font-weight: 100;
 }
 
 h3, h4, h5, h6, p {
@@ -57,7 +61,7 @@ body {
 
 .title {
 	h4 {
-	    letter-spacing: 1.3;
+	    letter-spacing: 1.7;
 	    text-transform: uppercase;
 	    font-size: 13px;
 	}
@@ -113,7 +117,6 @@ body {
 		    display: inline-block;
 		    padding-bottom: 5px;
 	        font-family: $titleFont;
-		    font-weight: bold;
 		    font-size: 22px;
 		    color: $contrastColor;
 	    }
@@ -159,7 +162,6 @@ body {
 	    border-bottom: double 4px $lightColor;
 	    padding-bottom: 5px;
 	    font-family: $titleFont;
-	    font-weight: 600;
 	}
 	.shadow {
 	    height: 50px;
