@@ -179,7 +179,7 @@ body {
 		padding: 0px 30px;
 	    display: flex;
 	    align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
 	    justify-content: center;
 
 	    div {
@@ -312,7 +312,7 @@ body {
 	}
 }
 
-.slick-slider { display: table; table-layout: fixed; width: 100%; }
+/*.slick-slider { display: table; table-layout: fixed; width: 100%; }*/
 
 
 .desk {
