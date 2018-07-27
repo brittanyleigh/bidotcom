@@ -130,9 +130,11 @@ body {
     flex-wrap: nowrap;
     justify-content: center; }
     @media screen and (max-width: 768px) {
-      .secondary #skills div {
-        min-width: 95px;
-        text-align: center; } }
+      .secondary #skills {
+        padding: 0px 5px; }
+        .secondary #skills div {
+          text-align: center;
+          height: 130px; } }
     .secondary #skills p {
       display: none;
       font-family: "Raleway", sans-serif;
@@ -145,7 +147,8 @@ body {
       padding-top: 10px; }
       @media screen and (max-width: 768px) {
         .secondary #skills p {
-          display: block; } }
+          display: block;
+          font-size: 10px; } }
   .secondary .skills {
     flex-basis: 100%;
     max-width: 100%;
@@ -163,7 +166,7 @@ body {
           padding: 10px; } }
       @media screen and (max-width: 500px) {
         .secondary .skills img {
-          max-height: 75px; } }
+          max-height: 60px; } }
     .secondary .skills .slick-slide {
       height: initial;
       padding-bottom: 38px; }
@@ -222,7 +225,8 @@ body {
   background: transparent;
   font-size: 32px;
   color: #c1c1c1;
-  margin-bottom: 28px; }
+  margin-bottom: 28px;
+  padding: 0px; }
   .slick-slider button:hover, .shadow button:hover {
     color: #818181;
     cursor: pointer; }
