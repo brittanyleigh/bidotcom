@@ -107,7 +107,9 @@ $(document).ready(function() {
 	});
 
     function slickStyles(){
-    	$(document).find('.projects .slick-arrow').appendTo('.secondary .shadow');
+    	//$(document).find('.projects .slick-arrow').appendTo('.secondary .shadow');
+    	$(document).find('.projects .slick-next').appendTo('.projects');
+    	$(document).find('.projects .slick-prev').prependTo('.projects');
 	    $(document).find('.slick-prev').html('<i class="fas fa-caret-left"></i>');
 		$(document).find('.slick-next').html('<i class="fas fa-caret-right"></i>');
 	  }

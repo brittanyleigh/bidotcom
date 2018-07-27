@@ -65,6 +65,16 @@ body {
   .projects img {
     width: 100%;
     pointer-events: none; }
+  .projects .slick-next {
+    z-index: 1000;
+    margin-left: -30px;
+    padding-right: 15px;
+    margin-top: 75px; }
+  .projects .slick-prev {
+    z-index: 1000;
+    margin-right: -30px;
+    padding-left: 15px;
+    margin-top: 75px; }
   .projects .slick-slide {
     height: initial; }
   .projects .description {
@@ -220,14 +230,15 @@ body {
       .secondary .contact .large {
         width: calc(100% - 30px); } }
 
-.slick-slider button, .shadow button {
+.slick-slider button {
   border: none;
   background: transparent;
   font-size: 32px;
   color: #c1c1c1;
   margin-bottom: 28px;
-  padding: 0px; }
-  .slick-slider button:hover, .shadow button:hover {
+  padding: 0px;
+  font-family: "Palatino", cursive; }
+  .slick-slider button:hover {
     color: #818181;
     cursor: pointer; }
 
