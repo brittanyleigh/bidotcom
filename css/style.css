@@ -62,6 +62,8 @@ body {
   display: flex !important;
   align-items: center;
   flex-wrap: nowrap; }
+  .projects .slick-list {
+    margin-left: 3px; }
   .projects img {
     width: 100%;
     pointer-events: none; }

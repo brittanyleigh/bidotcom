@@ -83,7 +83,7 @@ $(document).ready(function() {
 	    slidesToShow: 3,
 	    slidesToScroll: 1,
 	    autoplay: false,
-	    arrows: false,
+	    arrows: true,
 	    dots: false,
 	    adaptiveHeight: true,
 	    responsive: [

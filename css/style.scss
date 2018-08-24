@@ -90,6 +90,10 @@ body {
     align-items: center;
     flex-wrap: nowrap;
 
+    .slick-list {
+	    margin-left: 3px;
+    }
+
 	img {
 		width: 100%;
 		pointer-events: none;
