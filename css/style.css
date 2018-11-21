@@ -1,24 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,600");
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
 h1, h2, h3, h4, h5, h6, p {
   margin: 5px 0px;
   color: #949494; }
 
+a:-webkit-any-link {
+  text-decoration: none !important; }
+
 h1 {
-  font-family: "Palatino", cursive;
-  color: #939da2;
+  font-family: "Satisfy", cursive;
+  color: #000000;
   font-weight: 100;
-  font-size: 30px; }
+  font-size: 34px; }
 
 h2 {
   text-align: center;
-  font-family: "Palatino", cursive;
+  font-family: "Satisfy", cursive;
   letter-spacing: 1;
-  color: #939da2;
+  color: #000000;
   font-weight: 100; }
 
 h3, h4, h5, h6, p {
   font-family: "Raleway", sans-serif;
-  font-weight: 400; }
+  font-weight: 600; }
 
 body {
   background: url("../img/subtle_white_feathers.png");
@@ -32,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px; }
+  padding: 15px 50px; }
   @media screen and (max-width: 575px) {
     .header {
       flex-wrap: wrap;
@@ -41,14 +45,24 @@ body {
         width: 100%; } }
 
 .title h4 {
-  letter-spacing: 1.7;
+  letter-spacing: 1.2;
   text-transform: uppercase;
-  font-size: 13px; }
+  font-size: 12px;
+  padding-top: 3px;
+  font-weight: 600;
+  background: #bfd654;
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 50px;
+  text-align: center; }
 
 .links {
-  font-size: 24px; }
+  font-size: 24px;
+  background: #bfd654;
+  padding: 10px;
+  border-radius: 50px; }
   .links a {
-    color: #939da2;
+    color: #000000;
     text-decoration: none;
     margin: 0px 5px; }
     .links a span {
@@ -59,26 +73,40 @@ body {
       margin-bottom: 5px; }
 
 .projects {
-  display: flex !important;
-  align-items: center;
-  flex-wrap: nowrap; }
-  .projects .slick-list {
-    margin-left: 3px; }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 50px;
+  margin: 50px; }
   .projects img {
-    width: 100%;
-    pointer-events: none; }
-  .projects .slick-next {
-    z-index: 1000;
-    margin-left: -30px;
-    padding-right: 15px;
-    margin-top: 75px; }
-  .projects .slick-prev {
-    z-index: 1000;
-    margin-right: -30px;
-    padding-left: 15px;
-    margin-top: 75px; }
-  .projects .slick-slide {
-    height: initial; }
+    width: 100%; }
+  .projects div {
+    border: solid 1px #000000;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 0px #b1b1b1; }
+    .projects div:hover p {
+      display: block; }
+    .projects div h3 {
+      background: #000000;
+      margin: 0px;
+      padding: 15px 10px;
+      text-align: center;
+      color: white; }
+    .projects div p {
+      position: absolute;
+      bottom: 19px;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: calc(100% - 18px);
+      text-align: center;
+      margin: 0px;
+      padding: 10px;
+      background: #000000;
+      color: white;
+      font-style: italic;
+      display: none;
+      transition-duration: 3s; }
   .projects .description {
     padding: 15px;
     text-align: center;
@@ -92,12 +120,12 @@ body {
         margin-top: 25px; } }
     .projects .description h3 {
       letter-spacing: 1;
-      border-bottom: double 4px gainsboro;
+      border-bottom: double 4px #bfd654;
       display: inline-block;
       padding-bottom: 5px;
-      font-family: "Palatino", cursive;
+      font-family: "Satisfy", cursive;
       font-size: 22px;
-      color: #939da2; }
+      color: #000000; }
     .projects .description p, .projects .description a {
       color: #949494;
       letter-spacing: 1;
@@ -107,34 +135,44 @@ body {
     .projects .description a {
       font-weight: 400;
       text-decoration: none;
-      border-bottom: dotted 2px gainsboro; }
+      border-bottom: dotted 2px #bfd654; }
       .projects .description a:hover {
         font-weight: bold; }
 
 .secondary {
-  display: flex;
-  flex-wrap: wrap; }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 50px;
+  margin: 15px 50px; }
   .secondary .shadow .slick-next, .secondary .shadow .slick-prev {
     z-index: 1000;
     display: inline-block !important;
-    color: #939da2;
+    color: #000000;
     padding-top: 15px; }
     .secondary .shadow .slick-next:hover, .secondary .shadow .slick-prev:hover {
-      color: #545d62; }
+      color: black; }
   .secondary h2 {
     letter-spacing: 1;
-    border-bottom: double 4px gainsboro;
     padding-bottom: 5px;
-    font-family: "Palatino", cursive; }
+    font-family: "Satisfy", cursive;
+    position: relative; }
+    .secondary h2:after {
+      content: '';
+      width: 100%;
+      border-bottom: solid 2px #bfd654;
+      border-top: solid 2px #bfd654;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: 1;
+      border-radius: 100px; }
   .secondary .shadow {
     height: 50px;
     background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
     flex-basis: 100%;
     text-align: center; }
-  .secondary .about, .secondary .contact {
-    padding: 15px 30px; }
-    .secondary .about h2, .secondary .contact h2 {
-      margin: 50px 0px; }
+  .secondary .about h2, .secondary .contact h2 {
+    margin: 50px 0px; }
   .secondary #skills {
     padding: 0px 30px;
     display: flex;
@@ -188,9 +226,10 @@ body {
     font-size: 15px;
     text-align: center;
     margin: 15px 0px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #000000; }
     .secondary .about p svg {
-      color: #dcdcdc; }
+      color: #bfd654; }
   .secondary .contact form {
     text-align: center; }
   .secondary .contact input, .secondary .contact textarea {
@@ -204,13 +243,14 @@ body {
     color: #9398a2; }
   .secondary .contact .submit {
     border-radius: 0px;
-    background: gainsboro;
+    background: #bfd654;
     border: none;
     padding: 10px;
     min-width: 150px;
-    color: #939da2; }
+    color: #000000;
+    border-radius: 50px; }
     .secondary .contact .submit:hover {
-      background: #cfcfcf;
+      background: #b7d13f;
       cursor: pointer; }
   .secondary .contact ::placeholder {
     color: #d8d9dd;
