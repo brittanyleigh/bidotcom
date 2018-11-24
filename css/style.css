@@ -34,12 +34,19 @@ body {
   outline: none; }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 15px 50px; }
   @media screen and (max-width: 575px) {
     .header {
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       text-align: center; }
       .header .title, .header .links {
@@ -66,6 +73,7 @@ body {
     color: #000000;
     text-decoration: none;
     margin: 0px 5px;
+    -webkit-transition: color .75s;
     transition: color .75s; }
     .links a:hover {
       color: #899e26; }
@@ -94,6 +102,7 @@ body {
     overflow: hidden;
     position: relative;
     border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 25px 0px #8e8e8e;
     box-shadow: 10px 10px 25px 0px #8e8e8e; }
     .projects div:hover p {
       height: calc(100% - 75px);
@@ -109,6 +118,7 @@ body {
     .projects div p {
       position: absolute;
       left: 50%;
+      -webkit-transform: translate(-50%, 0%);
       transform: translate(-50%, 0%);
       width: calc(100% - 18px);
       text-align: center;
@@ -116,12 +126,20 @@ body {
       padding: 0px 15px;
       color: white;
       font-style: italic;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-transition: all .5s ease;
       transition: all .5s ease;
       height: calc(100% - 72px);
       bottom: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(144, 144, 144, 0.25)), to(black));
       background-image: linear-gradient(rgba(144, 144, 144, 0.25), black);
       height: 0;
       overflow: hidden;
@@ -129,12 +147,16 @@ body {
       font-weight: 400;
       font-size: 14px; }
     .projects div#parks p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(136, 180, 138, 0.7)), to(black));
       background-image: linear-gradient(rgba(136, 180, 138, 0.7), black); }
     .projects div#ryp p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 184, 224, 0.7)), to(black));
       background-image: linear-gradient(rgba(72, 184, 224, 0.7), black); }
     .projects div#baseball p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 52, 121, 0.7)), to(black));
       background-image: linear-gradient(rgba(0, 52, 121, 0.7), black); }
     .projects div#oncell p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(109, 177, 207, 0.7)), to(black));
       background-image: linear-gradient(rgba(109, 177, 207, 0.7), black); }
   .projects .description {
     padding: 15px;
@@ -204,16 +226,25 @@ body {
       border-radius: 100px; }
   .secondary .shadow {
     height: 50px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9398a2), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     text-align: center; }
   .secondary .about h2, .secondary .contact h2 {
     margin: 50px 0px; }
   .secondary #skills {
     padding: 0px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     @media screen and (max-width: 768px) {
       .secondary #skills {
@@ -236,12 +267,14 @@ body {
           display: block;
           font-size: 10px; } }
   .secondary .skills {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
     padding: 15px 0px; }
     .secondary .skills h2 {
       margin: 50px 30px; }
     .secondary .skills img {
+      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
       opacity: .25;
       max-height: 85px;
@@ -257,6 +290,8 @@ body {
       height: initial;
       padding-bottom: 38px; }
   .secondary .about, .secondary .contact {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1; }
   .secondary .about p {
     font-size: 15px;
@@ -285,10 +320,20 @@ body {
     min-width: 150px;
     color: #000000;
     border-radius: 50px;
+    -webkit-transition: background .75s;
     transition: background .75s; }
     .secondary .contact .submit:hover {
       background: #b7d13f;
       cursor: pointer; }
+  .secondary .contact ::-webkit-input-placeholder {
+    color: #d8d9dd;
+    opacity: 1; }
+  .secondary .contact :-ms-input-placeholder {
+    color: #d8d9dd;
+    opacity: 1; }
+  .secondary .contact ::-ms-input-placeholder {
+    color: #d8d9dd;
+    opacity: 1; }
   .secondary .contact ::placeholder {
     color: #d8d9dd;
     opacity: 1; }
