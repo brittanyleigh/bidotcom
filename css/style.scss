@@ -116,16 +116,13 @@ body {
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	grid-gap: 50px;
 	margin: 50px;
 
-	@media screen and (max-width: 1275px){
-		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	}
-
 	@media screen and (max-width: 475px){
 		margin: 15px;
+		grid-template-columns: 1fr;
 	}
 
 	img {
