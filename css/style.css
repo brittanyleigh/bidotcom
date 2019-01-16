@@ -145,8 +145,8 @@ body {
       font-weight: 400;
       font-size: 14px; }
     .projects div#parks p {
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(136, 180, 138, 0.7)), to(black));
-      background-image: linear-gradient(rgba(136, 180, 138, 0.7), black); }
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 163, 74, 0.7)), to(black));
+      background-image: linear-gradient(rgba(217, 163, 74, 0.7), black); }
     .projects div#ryp p {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 184, 224, 0.7)), to(black));
       background-image: linear-gradient(rgba(72, 184, 224, 0.7), black); }
@@ -154,8 +154,14 @@ body {
       background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 52, 121, 0.7)), to(black));
       background-image: linear-gradient(rgba(0, 52, 121, 0.7), black); }
     .projects div#oncell p {
-      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(109, 177, 207, 0.7)), to(black));
-      background-image: linear-gradient(rgba(109, 177, 207, 0.7), black); }
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(89, 187, 138, 0.7)), to(black));
+      background-image: linear-gradient(rgba(89, 187, 138, 0.7), black); }
+    .projects div#breathe p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(153, 217, 247, 0.7)), to(black));
+      background-image: linear-gradient(rgba(153, 217, 247, 0.7), black); }
+    .projects div#dalton p {
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 81, 119, 0.7)), to(black));
+      background-image: linear-gradient(rgba(237, 81, 119, 0.7), black); }
   .projects .description {
     padding: 15px;
     text-align: center;
