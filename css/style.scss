@@ -10,6 +10,8 @@ $secondaryColor: #949494;
 $contrastColor: #000000;
 //$lightColor: gainsboro;
 $lightColor: #bfd654;
+$background-top: rgba(39,101,255,1);
+$background-bottom: rgba(154,234,255,1);
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 5px 0px;
@@ -43,6 +45,7 @@ body {
 	background-size: 200px;
 	margin: 0px;
 	overflow-x: hidden;
+  background-image: linear-gradient( 178.2deg, $background-bottom 3.6%, $background-top 101.6% );
 }
 
 *:focus {
@@ -79,7 +82,7 @@ body {
 		font-size: 12px;
 		padding-top: 3px;
 		font-weight: 600;
-		background: $lightColor;
+		background: $background-bottom;
 		color: $contrastColor;
 		padding: 5px 10px;
 		border-radius: 50px;
@@ -89,7 +92,7 @@ body {
 
 .links {
 	font-size: 24px;
-	background: $lightColor;
+	background: $background-bottom;
   padding: 10px;
   border-radius: 50px;
 
@@ -101,7 +104,7 @@ body {
 		transition: color .75s;
 
 		&:hover {
-			color: darken($lightColor, 20%);
+			color: darken($background-bottom, 20%);
 		}
 
 		span {
@@ -127,42 +130,43 @@ body {
 
 	img {
 		width: 100%;
+		border-bottom: solid 1px lighten($mainColor, 25%);
 	}
 	div {
-		border: solid 1px $contrastColor;
+		border: solid 1px #000000;
 		overflow: hidden;
 		position: relative;
 		border-radius: 20px;
-    -webkit-box-shadow: 10px 10px 25px 0px #8e8e8e;
-            box-shadow: 10px 10px 25px 0px #8e8e8e;
-
-		&:hover {
-			p {
-		    height: calc(100% - 75px);
-				padding: 10px;
-			}
-		}
+    -webkit-box-shadow: 10px 10px 25px 0px #23428e;
+            box-shadow: 10px 10px 25px 0px #23428e;
+		background: #fff;
+		display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
 
 		h3 {
-			background: $contrastColor;
 			margin: 0px;
 			padding: 15px 10px;
 			text-align: center;
-			color: white;
-			font-family: "Satisfy", cursive;
+			color: $contrastColor;
 			letter-spacing: 1.5;
+			font-family: 'Satisfy', cursive;
 		}
 		p {
-			position: absolute;
-			left: 50%;
-			-webkit-transform: translate(-50%, 0%);
-			        transform: translate(-50%, 0%);
-			width: calc(100% - 18px);
 			text-align: center;
 			margin: 0px;
 			padding: 0px 15px;
-			color: white;
-			font-style: italic;
+			color: $mainColor;
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -176,37 +180,10 @@ body {
 			-webkit-box-align: end;
 			    -ms-flex-align: end;
 			        align-items: flex-end;
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(144, 144, 144, 0.25)), to(black));
-			background-image: linear-gradient(rgba(144, 144, 144, 0.25), black);
-			height: 0;
 			overflow: hidden;
 			text-transform: lowercase;
 			font-weight: 400;
 			font-size: 14px;
-		}
-		&#diamonds p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 149, 162, 0.7)), to(black));
-			background-image: linear-gradient(rgba(61, 149, 162, 0.7), black);
-		}
-		&#ryp p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(72, 184, 224, .7)), to(black));
-			background-image: linear-gradient(rgba(72, 184, 224, .7), black);
-		}
-		&#baseball p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 52, 121, .7)), to(black));
-			background-image: linear-gradient(rgba(0, 52, 121, .7), black);
-		}
-		&#oncell p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(89, 187, 138, .7)), to(black));
-			background-image: linear-gradient(rgba(89, 187, 138, .7), black);
-		}
-		&#breathe p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 42, 85, .7)), to(black));
-			background-image: linear-gradient(rgba(43, 42, 85, .7), black);
-		}
-		&#dalton p {
-			background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 81, 119, .7)), to(black));
-			background-image: linear-gradient(rgba(237, 81, 119, .7), black);
 		}
 	}
 	.description {
@@ -288,8 +265,8 @@ body {
 		&:after {
 			content: '';
 	    width: 100%;
-	    border-bottom: solid 2px $lightColor;
-	    border-top: solid 2px $lightColor;
+	    border-bottom: solid 2px $background-top;
+	    border-top: solid 2px $background-top;
 	    position: absolute;
 	    left: 0;
 	    top: 100%;
@@ -392,7 +369,7 @@ body {
 				color: $contrastColor;
 
 		    svg {
-		    	color: $lightColor;
+		    	color: $background-top;
 		    }
 		}
 	}
@@ -412,17 +389,17 @@ body {
 		}
 		.submit {
 		    border-radius: 0px;
-		    background: $lightColor;
+		    background: $background-top;
 		    border: none;
 		    padding: 10px;
 		    min-width: 150px;
-		    color: $contrastColor;
+		    color: #ffffff;
 				border-radius: 50px;
 				-webkit-transition: background .75s;
 				transition: background .75s;
 
 		    &:hover {
-		    	background: darken($lightColor, 5%);
+		    	background: darken($background-top, 5%);
 		    	cursor: pointer;
 		    }
 		}
