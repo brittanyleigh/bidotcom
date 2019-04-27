@@ -12,7 +12,10 @@ $background-top: #e8faff;
 $background-bottom: #c1d9f1;
 $button-background: darken($background-bottom, 20%);
 
-$breakpoint: 575px;
+$breakpoint-xs: 400px;
+$breakpoint-sm: 575px;
+$breakpoint-md: 650px;
+$breakpoint-lg: 950px;
 
 h1, h2, h3, h4, h5, h6, p {
 	margin: 5px 0px;
@@ -40,7 +43,7 @@ h3, h4, h5, h6, p {
 	font-weight: 600;
 }
 
-body {
+.container {
 	background: url('../img/wavy-dots.png');
 	background-size: 200px;
 	margin: 0px;
@@ -60,11 +63,14 @@ body {
           justify-content: space-between;
   padding: 15px 50px;
 
-  @media screen and (max-width: $breakpoint){
+  @media screen and (max-width: $breakpoint-sm){
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center;
   }
+	@media screen and (max-width: $breakpoint-xs){
+		padding: 15px;
+	}
 }
 
 .title {
@@ -82,7 +88,7 @@ body {
 		text-align: center;
 		font-weight: bold;
 	}
-	@media screen and (max-width: $breakpoint){ 
+	@media screen and (max-width: $breakpoint-sm){ 
 		width: 100%;
 	}
 }
@@ -94,7 +100,7 @@ body {
   padding: 10px;
   border-radius: 50px;
 	
-	@media screen and (max-width: $breakpoint){ 
+	@media screen and (max-width: $breakpoint-sm){ 
 		width: 100%;
 	}
 
@@ -105,15 +111,23 @@ body {
 		-webkit-transition: color .75s;
 		transition: color .75s;
 
-		&:hover {
-			color: $button-background;
+		&:hover, &:focus {
+			color: darken($button-background, 10%);
 		}
+		@media screen and (max-width: $breakpoint-sm){
+	    font-size: 1.75em;
+		}
+	}
+	&__hr {
+		border: 0;
+		border-top: solid 1px $lightGray;
+		width: 50%;
 	}
 }
 
 .hidden {
 	&-large {
-		@media screen and (min-width: $breakpoint){ 
+		@media screen and (min-width: $breakpoint-sm){ 
 			display: none;
 		}
 	}
@@ -129,6 +143,17 @@ body {
 		@media screen and (max-width: 475px){
 			margin: 15px;
 			grid-template-columns: 1fr;
+		}
+	}
+	&--halves {
+		margin: 15px 50px;
+		grid-template-columns: 1fr 1fr;
+		@media screen and (max-width: $breakpoint-lg){
+			grid-template-columns: 1fr;
+		}
+		@media screen and (max-width: $breakpoint-sm){
+			grid-gap: 15px;
+			margin: 15px;
 		}
 	}
 }
@@ -209,31 +234,23 @@ body {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
-	&:hover {
+	border: 0px;
+	min-width: 100px;
+	&:hover, &:focus {
 		cursor: pointer;
 		background: darken($button-background, 10%);
 	}
 }
 
 .secondary {
-    display: grid;
-		grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-		margin: 15px 50px;
+  grid-gap: 50px;
 
-		@media screen and (max-width: 950px){
-			grid-template-columns: 1fr;
-		}
-		@media screen and (max-width: 475px){
-			grid-gap: 15px;
-			margin: 15px;
-		}
-
-	h2 {
+	&__heading {
 		letter-spacing: 1;
     padding-bottom: 5px;
     font-family: $titleFont;
 		position: relative;
+		margin: 50px 0px;
 
 		&:after {
 			content: '';
@@ -247,103 +264,55 @@ body {
 	    border-radius: 100px;
 		}
 	}
-	.shadow {
-	    height: 50px;
-	    background: -webkit-gradient(linear, left top, left bottom, from(#9398a2), to(rgba(255, 255, 255, 0)));
-	    background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
-	    -ms-flex-preferred-size: 100%;
-	        flex-basis: 100%;
-	    text-align: center;
-	}
-	.about, .contact {
-		h2 {
-			margin: 50px 0px;
-		}
-	}
 
-	.about, .contact {
+	&__section {
 		-webkit-box-flex: 1;
-		    -ms-flex-positive: 1;
-		        flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
 	}
-
-	.about {
-		p {
-		    font-size: 15px;
-		    text-align: center;
-		    margin: 15px 0px;
-		    text-transform: uppercase;
-				color: $contrastColor;
-
-		    svg {
-		    	color: $button-background;
-		    }
-		}
+	&__p {
+		font-size: 15px;
+		text-align: center;
+		margin: 15px 0px;
+		text-transform: uppercase;
+		color: $contrastColor;
 	}
-	.contact {
-		form {
-			text-align: center;
-		}
-		input, textarea {
-		    font-size: 18px;
-		    font-family: 'open sans';
-		    padding: 5px;
-	        margin-bottom: 10px;
-            border: solid 1px #ccc;
-            font-family: 'raleway';
-		    font-size: 16px;
-		    color: $mainColor;
-		}
-		.submit {
-		    border-radius: 0px;
-		    background: $button-background;
-		    border: none;
-		    padding: 10px;
-		    min-width: 150px;
-		    color: $light;
-				border-radius: 50px;
-				-webkit-transition: background .75s;
-				transition: background .75s;
-
-		    &:hover {
-		    	background: darken($background-bottom, 25%);
-		    	cursor: pointer;
-		    }
-		}
-		::-webkit-input-placeholder {
-			color: $lightGray;
-			opacity: 1;
-		}
-		:-ms-input-placeholder {
-			color: $lightGray;
-			opacity: 1;
-		}
-		::-ms-input-placeholder {
-			color: $lightGray;
-			opacity: 1;
-		}
-		::placeholder {
-			color: $lightGray;
-			opacity: 1;
-		}
-		.small {
-			width: 35%;
-			@media screen and (max-width: 650px){
-				width: calc(50% - 32.5px);
-			}
-			@media screen and (max-width: 400px){
-				width: calc(100% - 30px);
-			}
-		}
-		.large {
+	&__i {
+		color: $button-background;
+	}
+	&__form {
+		text-align: center;
+	}
+	&__input {
+		padding: 5px;
+		margin-bottom: 10px;
+		border: solid 1px $lightGray;
+		font-family: 'raleway';
+		font-size: 16px;
+		color: $mainColor;
+		border-radius: 1000px;
+		
+		&--large {
 			width: 70.25%;
-			@media screen and (max-width: 650px){
+			@media screen and (max-width: $breakpoint-md){
 				width: calc(100% - 60px);
 			}
-			@media screen and (max-width: 400px){
+			@media screen and (max-width: $breakpoint-xs){
 				width: calc(100% - 30px);
 			}
 		}
+		&--small {
+			width: 35%;
+			@media screen and (max-width: $breakpoint-md){
+				width: calc(50% - 32.5px);
+			}
+			@media screen and (max-width: $breakpoint-xs){
+				width: calc(100% - 30px);
+			}
+		}
+	}
+	&__textarea {
+		border-radius: 15px;
 	}
 }
 

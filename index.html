@@ -13,33 +13,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="UTF-8">
 </head>
-<body>
+<body class="container">
 	<header role="banner" class="header">
 		<div class="title">
 			<h1 class="title__h1">Brittany Isenberg</h1>
 			<h4 class="title__sub">Web Developer & Designer</h4>
 		</div>
 		<nav class="links">
-			<a class="links__a hidden-large" href="#react">
+			<a class="links__a hidden-large" href="#react" aria-label="React Project">
         <i class="links__i fab fa-react"></i>
       </a>
-			<a class="links__a hidden-large" href="#django">
+			<a class="links__a hidden-large" href="#django" aria-label="Django Project">
         <i class="links__i fab fa-python"></i>
       </a>
-			<a class="links__a hidden-large" href="#wordpress">
+			<a class="links__a hidden-large" href="#wordpress" aria-label="WordPress Project">
         <i class="links__i fab fa-wordpress-simple"></i>
       </a>
-      <br class="hidden-large"/>
-			<a class="links__a" href="#about">
+      <hr class="links__hr hidden-large"/>
+			<a class="links__a" href="#about" aria-label="About">
         <i class="links__i fas fa-user-circle"></i>
       </a>
-			<a class="links__a" href="#contact">
+			<a class="links__a" href="#contact" aria-label="Contact">
         <i class="links__i fas fa-paper-plane"></i>
       </a>
-			<a class="links__a" href="https://www.linkedin.com/in/brittanyisenberg/" target="_blank">
+			<a class="links__a" href="https://www.linkedin.com/in/brittanyisenberg/" target="_blank" aria-label="LinkedIn Profile">
         <i class="links__i fab fa-linkedin-in"></i>
       </a>
-			<a class="links__a" href="https://github.com/brittanyleigh" target="_blank">
+			<a class="links__a" href="https://github.com/brittanyleigh" target="_blank" aria-label="GitHub Profile">
         <i class="links__i fab fa-github"></i>
       </a>
 		</nav>
@@ -86,23 +86,37 @@
       </div>
 		</div>
 	</div>
-	<div class="secondary">
-		<div class="about" id="about">
-			<h2>About Me</h2>
-			<p><i class="fas fa-caret-right"></i> Charlotte, NC <i class="fas fa-arrow-right"></i> Rochester, NY <i class="fas fa-arrow-right"></i> Greenville, SC</p>
-			<p><i class="fas fa-caret-right"></i> Dog lover. Shelter dog adopter.</p>
-			<p><i class="fas fa-caret-right"></i> Dark chocolate addict. Smoothie drinker.</p>
-			<p><i class="fas fa-caret-right"></i> Jewelry maker. Creative spirit.</p>
-			<p><i class="fas fa-caret-right"></i> Avid traveler. Mountain hiker.</p>
-			<p><i class="fas fa-caret-right"></i> Passionate Chicago Cubs fan.</p>
+	<div class="secondary grid grid--halves">
+		<div class="secondary__section" id="about">
+			<h2 class="secondary__heading">About Me</h2>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Charlotte, NC 
+        <i class="secondary__i fas fa-arrow-right"></i> Rochester, NY 
+        <i class="secondary__i fas fa-arrow-right"></i> Greenville, SC
+      </p>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Dog lover. Shelter dog adopter.
+      </p>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Dark chocolate addict. Smoothie drinker.
+      </p>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Jewelry maker. Creative spirit.
+      </p>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Avid traveler. Mountain hiker.
+      </p>
+			<p class="secondary__p">
+        <i class="secondary__i fas fa-caret-right"></i> Passionate Chicago Cubs fan.
+      </p>
 		</div>
-		<div class="contact" id="contact">
-			<h2>Get In Touch</h2>
-			<form action="https://formspree.io/brittany.isenberg@gmail.com" method="POST">
-			    <input type="text" name="name" placeholder="Name" class="small" required>
-			    <input type="email" name="_replyto" placeholder="Email" class="small" required><br>
-			    <textarea name="message" placeholder="Your Message" class="large" rows="6" required></textarea><br>
-			    <input type="submit" value="Send" class="button submit">
+		<div class="secondary__section" id="contact">
+			<h2 class="secondary__heading">Get In Touch</h2>
+			<form action="https://formspree.io/brittany.isenberg@gmail.com" method="POST" class="secondary__form">
+			    <input type="text" name="name" placeholder="Name" class="secondary__input secondary__input--small" required>
+			    <input type="email" name="_replyto" placeholder="Email" class="secondary__input secondary__input--small" required><br>
+			    <textarea name="message" placeholder="Your Message" class="secondary__input secondary__input--large secondary__textarea" rows="6" required></textarea><br>
+			    <input type="submit" value="Send" class="button">
 			    <input type="hidden" name="_next" value="https://www.brittanyisenberg.com/" />
 			</form>
 		</div>

@@ -28,7 +28,7 @@ h3, h4, h5, h6, p {
   font-weight: 600;
 }
 
-body {
+.container {
   background: url("../img/wavy-dots.png");
   background-size: 200px;
   margin: 0px;
@@ -53,6 +53,11 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header {
+    padding: 15px;
   }
 }
 
@@ -95,8 +100,18 @@ body {
   -webkit-transition: color 0.75s;
   transition: color 0.75s;
 }
-.links__a:hover {
-  color: #6ea6de;
+.links__a:hover, .links__a:focus {
+  color: #448dd5;
+}
+@media screen and (max-width: 575px) {
+  .links__a {
+    font-size: 1.75em;
+  }
+}
+.links__hr {
+  border: 0;
+  border-top: solid 1px #dedede;
+  width: 50%;
 }
 
 @media screen and (min-width: 575px) {
@@ -117,6 +132,21 @@ body {
   .grid--thirds {
     margin: 15px;
     grid-template-columns: 1fr;
+  }
+}
+.grid--halves {
+  margin: 15px 50px;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 950px) {
+  .grid--halves {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 575px) {
+  .grid--halves {
+    grid-gap: 15px;
+    margin: 15px;
   }
 }
 
@@ -195,36 +225,25 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  border: 0px;
+  min-width: 100px;
 }
-.button:hover {
+.button:hover, .button:focus {
   cursor: pointer;
   background: #448dd5;
 }
 
 .secondary {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
-  margin: 15px 50px;
 }
-@media screen and (max-width: 950px) {
-  .secondary {
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 475px) {
-  .secondary {
-    grid-gap: 15px;
-    margin: 15px;
-  }
-}
-.secondary h2 {
+.secondary__heading {
   letter-spacing: 1;
   padding-bottom: 5px;
   font-family: "Satisfy", cursive;
   position: relative;
+  margin: 50px 0px;
 }
-.secondary h2:after {
+.secondary__heading:after {
   content: "";
   width: 100%;
   border-bottom: solid 2px #6ea6de;
@@ -235,101 +254,61 @@ body {
   z-index: 1;
   border-radius: 100px;
 }
-.secondary .shadow {
-  height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9398a2), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, #9398a2 0%, rgba(255, 255, 255, 0) 100%);
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  text-align: center;
-}
-.secondary .about h2, .secondary .contact h2 {
-  margin: 50px 0px;
-}
-.secondary .about, .secondary .contact {
+.secondary__section {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-.secondary .about p {
+.secondary__p {
   font-size: 15px;
   text-align: center;
   margin: 15px 0px;
   text-transform: uppercase;
   color: #353535;
 }
-.secondary .about p svg {
+.secondary__i {
   color: #6ea6de;
 }
-.secondary .contact form {
+.secondary__form {
   text-align: center;
 }
-.secondary .contact input, .secondary .contact textarea {
-  font-size: 18px;
-  font-family: "open sans";
+.secondary__input {
   padding: 5px;
   margin-bottom: 10px;
-  border: solid 1px #ccc;
+  border: solid 1px #dedede;
   font-family: "raleway";
   font-size: 16px;
   color: #9398a2;
+  border-radius: 1000px;
 }
-.secondary .contact .submit {
-  border-radius: 0px;
-  background: #6ea6de;
-  border: none;
-  padding: 10px;
-  min-width: 150px;
-  color: #ffffff;
-  border-radius: 50px;
-  -webkit-transition: background 0.75s;
-  transition: background 0.75s;
-}
-.secondary .contact .submit:hover {
-  background: #5999da;
-  cursor: pointer;
-}
-.secondary .contact ::-webkit-input-placeholder {
-  color: #dedede;
-  opacity: 1;
-}
-.secondary .contact :-ms-input-placeholder {
-  color: #dedede;
-  opacity: 1;
-}
-.secondary .contact ::-ms-input-placeholder {
-  color: #dedede;
-  opacity: 1;
-}
-.secondary .contact ::placeholder {
-  color: #dedede;
-  opacity: 1;
-}
-.secondary .contact .small {
-  width: 35%;
-}
-@media screen and (max-width: 650px) {
-  .secondary .contact .small {
-    width: calc(50% - 32.5px);
-  }
-}
-@media screen and (max-width: 400px) {
-  .secondary .contact .small {
-    width: calc(100% - 30px);
-  }
-}
-.secondary .contact .large {
+.secondary__input--large {
   width: 70.25%;
 }
 @media screen and (max-width: 650px) {
-  .secondary .contact .large {
+  .secondary__input--large {
     width: calc(100% - 60px);
   }
 }
 @media screen and (max-width: 400px) {
-  .secondary .contact .large {
+  .secondary__input--large {
     width: calc(100% - 30px);
   }
+}
+.secondary__input--small {
+  width: 35%;
+}
+@media screen and (max-width: 650px) {
+  .secondary__input--small {
+    width: calc(50% - 32.5px);
+  }
+}
+@media screen and (max-width: 400px) {
+  .secondary__input--small {
+    width: calc(100% - 30px);
+  }
+}
+.secondary__textarea {
+  border-radius: 15px;
 }
 
 .desk img {
